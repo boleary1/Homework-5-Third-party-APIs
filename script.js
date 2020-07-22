@@ -1,5 +1,4 @@
 let displayDate = document.getElementById('currentDay');
-displayDate.textContent = moment().format('dddd MMMM Do');
 let nineam = document.getElementById('9')
 let tenam = document.getElementById('10')
 let elevenam = document.getElementById('11')
@@ -13,8 +12,14 @@ let fivepm = document.getElementById('17')
 // changecolor("nineam", "tenam", "elevenam", "twelvepm", "onepm", "twopm", "threepm", "fourpm", "fivepm");
 // ["nineam", "tenam", "elevenam", "twelvepm", "onepm", "twopm", "threepm", "fourpm", "fivepm"].foreach(changecolor)
 
-changeAllColor();
+// changeAllColor();
 printActivities();
+setInterval(update, 1000);
+function update(){
+displayDate.textContent = moment().format('dddd MMMM Do h:mm:ss a');
+changeAllColor(); //moved here so that it will update on it's own as the hour changes
+};
+
 console.log(nineam.value = localStorage.getItem(9))
 function saveActivity(a) {
     // console.log(a.value)
