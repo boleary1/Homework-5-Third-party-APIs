@@ -1,3 +1,22 @@
+## Live website URL:
+[live website](https://boleary1.github.io/Homework-5-Third-party-APIs/)
+</br>
+[GitHub Repository](https://github.com/boleary1/Homework-5-Third-party-APIs)
+
+
+
+## **Description:**
+Website built in late July 2020.  Day planner works.  You can save individual items in local storage.  
+
+Last edit was 7/25/2020 by Brian O'leary.  Contact oleary.brian1@gmail.com with any questions.
+
+## **Screenshot:**
+
+![Screenshot of working app](9am.JPG)
+
+
+
+## **Original assignment description below:**
 # 05 Third-Party APIs: Work Day Scheduler
 
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
