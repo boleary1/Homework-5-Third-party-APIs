@@ -1,4 +1,4 @@
-let displayDate = document.getElementById('currentDay');
+let displayDate = document.getElementById('currentDay');//creates display variables
 let nineam = document.getElementById('9')
 let tenam = document.getElementById('10')
 let elevenam = document.getElementById('11')
@@ -20,13 +20,10 @@ displayDate.textContent = moment().format('dddd MMMM Do h:mm:ss a');
 changeAllColor(); //moved here so that it will update on it's own as the hour changes
 };
 
-console.log(nineam.value = localStorage.getItem(9))
 function saveActivity(a) {
-    // console.log(a.value)
-    // console.log(a.id)
     localStorage.setItem(a.id, a.value)
 }
-function printActivities() {
+function printActivities() { //moves activities to local storage
     nineam.value = localStorage.getItem(9)
     tenam.value = localStorage.getItem(10)
     elevenam.value = localStorage.getItem(11)
@@ -37,7 +34,7 @@ function printActivities() {
     fourpm.value = localStorage.getItem(16)
     fivepm.value = localStorage.getItem(17)
 }
-function changeAllColor(){
+function changeAllColor(){ //changes display color
     changecolor(nineam);
     changecolor(tenam);
     changecolor(elevenam);
@@ -50,33 +47,23 @@ function changeAllColor(){
 }
 function changecolor(i){
     
-    // console.log('changecolor called')
     for(j = 0; j < arguments.length; j++){
         
         if (parseInt(i.id) < moment().format('HH')){
-            // console.log(i,'before')
     
             i.classList.remove('future')
             i.classList.remove('present')
             i.classList.add('past')
         }
         else if (parseInt(i.id) > moment().format('HH')){
-            // console.log(i,'after')
             i.classList.add('future')
             i.classList.remove('present')
             i.classList.remove('past')
         }
         else if (parseInt(i.id) == moment().format('HH')) {
-            // console.log(i,'during')
             i.classList.remove('future')
             i.classList.add('present')
             i.classList.remove('past')
         }     };
 
 }
-// console.log(moment().format('dddd'));
-// console.log(moment().format('HH'));
-// console.log(moment().format('MMMM Do YYYY'));
-// console.log(moment().format('h:mm:ss a'));
-// console.log(moment().format('dddd MMMM Do'));
-// console.log(moment().startOf('day').fromNow());
